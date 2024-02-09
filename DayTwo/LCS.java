@@ -29,10 +29,9 @@ public class LCS {
             return 0;
         }
 
-        // Use a 2D array to store the lengths of LCS for subproblems
         int[][] dp = new int[2][n + 1];
 
-        // Iterate through the strings and fill the dp array
+
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 if (text1.charAt(i - 1) == text2.charAt(j - 1)) {

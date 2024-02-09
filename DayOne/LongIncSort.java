@@ -20,7 +20,7 @@ Output:
 
  import java.util.Arrays;
 
- public class LongIncSub {
+ public class LongIncSort {
  
      public static int lengthOfLIS(int[] nums) {
  
