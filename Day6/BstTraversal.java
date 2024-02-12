@@ -1,4 +1,28 @@
 package Day6;
+/*
+ * 1. Problem: Binary Tree Traversal
+
+Problem Statement:
+Implement functions to perform in-order, pre-order, and post-order traversals of a binary tree.
+
+Input:
+A binary tree.
+
+Output:
+The elements visited during each traversal.
+
+Example:
+Input:
+1
+/
+2 3
+/
+4 5
+Output:
+In-order Traversal: 4 -> 2 -> 5 -> 1 -> 3
+Pre-order Traversal: 1 -> 2 -> 4 -> 5 -> 3
+Post-order Traversal: 4 -> 5 -> 2 -> 3 -> 1
+ */
 
 public class BstTraversal {
     static class Node{
@@ -9,6 +33,7 @@ public class BstTraversal {
             this.value=v;
             this.right= this.left=null;
         }
+    }
 
         public static void Inorder(Node root){
             if(root !=null){
@@ -45,13 +70,16 @@ public class BstTraversal {
 
             System.out.println("Inorder Traversal");
             Inorder(root);
+            System.out.println();
 
             System.out.println("prerder Traversal");
             preorder(root);
+            System.out.println();
 
             System.out.println("postorder Traversal");
             postorder(root);
+            System.out.println();
 
         }
-    }
+    
 }
