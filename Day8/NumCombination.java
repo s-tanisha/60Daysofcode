@@ -59,13 +59,11 @@ public class NumCombination {
 
         return result;
     }
-    // public static void printarr(ArrayList<String> c){
-    //     c.listIterator()
-    // }
+
     public static void main(String args[]){
         String Num= "23";
         ArrayList<String> Combinations =ContactKeyboard(Num);
-        // printarr(Combinations);
+        
         System.out.println(Combinations);
     }
 }
