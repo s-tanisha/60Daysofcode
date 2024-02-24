@@ -1,6 +1,6 @@
 package Day17;
 /*
- * 2. Problem: Word Search
+ * 1. Problem: Word Search
 
 Problem Statement:
 Given a 2D board and a word, find if the word exists in the grid. The word can be constructed from letters 

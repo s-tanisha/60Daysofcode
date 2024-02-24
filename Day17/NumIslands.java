@@ -1,6 +1,6 @@
 package Day17;
 /*
- 3. Problem: Number of Islands
+ 2. Problem: Number of Islands
 
 Problem Statement:
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water),
