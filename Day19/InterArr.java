@@ -20,39 +20,36 @@ Output:
 import java.util.*;
 
 public class InterArr {
-    
-    public static int [] IntersectionArr(int arr1[], int arr2[]){
-        int L= Math.max(arr1.length, arr2.length);
-        int intr[]= new int[L];
 
-        HashMap<Integer, Integer> list= new HashMap<>();
-        for(int i:arr1){
-            if(list.containsKey(i)){
-                continue;
-            }else{
-                list.put(i,0);
-            }  
+    public static List<Integer> IntersectionArr(int arr1[], int arr2[]) {
+        List<Integer> intr = new ArrayList<>();
+
+        Set<Integer> set = new HashSet<>();
+        for (int i : arr1) {
+            set.add(i);
         }
-        int idx=0;
-        for(int j:arr2){
-            if(list.containsKey(j)){
-                intr[idx]=j;
-                idx++;
+
+        for (int j : arr2) {
+            if (set.contains(j)) {
+                intr.add(j);
+                set.remove(j); 
             }
         }
-        return intr;
 
+        return intr;
     }
-    public static void PrintArr(int arr[]){
-        for(int i: arr){
-            System.out.println(i+" ");
+
+    public static void PrintArr(List<Integer> list) {
+        for (int i : list) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
-    public static void main(String args[]){
-        int arr1[]={1, 2, 2, 1};
-        int arr2[]={2,2};
-       int arr[]= IntersectionArr(arr1, arr2);
-       PrintArr(arr);
+
+    public static void main(String args[]) {
+        int arr1[] = {1, 2, 2, 1};
+        int arr2[] = {2, 2};
+        List<Integer> result = IntersectionArr(arr1, arr2);
+        PrintArr(result);
     }
 }
