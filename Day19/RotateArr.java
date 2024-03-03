@@ -59,8 +59,11 @@ public class RotateArr {
     public static void main(String args[]){
         int arr[]={4, 5, 6, 7, 0, 1, 2};
         int target =0;
+        System.out.println("Time Complexity - O(n)");
         System.out.println(SearchTarget(target, arr));
+        System.out.println("Time Complexity - log(n)");
         System.out.println(BST(target, arr));
+   
     }
 
     
