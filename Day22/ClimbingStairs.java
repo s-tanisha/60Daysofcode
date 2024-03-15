@@ -21,6 +21,7 @@ Output:
 Explanation: There are five ways to climb the stairs: 1 step + 1 step + 1 step + 1 step, 2 steps + 1 step + 1 step, 1 step + 2 steps + 1 step, 1 step + 1 step + 2 steps, 2 steps + 2 steps.
 
  */
+
 public class ClimbingStairs {
     public static int diffWaysToClimb(int n){
        if(n<=1){
