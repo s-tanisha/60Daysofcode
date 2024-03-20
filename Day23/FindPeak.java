@@ -27,16 +27,40 @@ Output:
  */
 public class FindPeak {
     public static int FindPeakNum(int n[]){
-        return checkPeak(n);
+        int left=0;
+        int right = n.length-1;
+
+        while(left<right){
+            int mid= left +(right - left)/2;
+
+            if(n[mid]< n[mid+1]){
+                left = mid +1;
+            }else{
+                right=mid;
+            }
+            return left;
+        }
+
+        return left;
     }
-    public static int checkpeak(int n[]){
-        if()
-    }
+    // public static int checkpeak(int n[]){
+    //     for(int i=1; i<n.length-1;i++){
+    //         int prev= n[i-1];
+    //         int curr= n[i];
+    //         int fwd=n[i+1];
+            
+    //         if(prev<curr && fwd<curr){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
     public static void main(String args[]){
 
         int nums[]={1,2,3,1};
 
         int peak=FindPeakNum(nums);
+        System.out.println(peak);
 
     }
 }
